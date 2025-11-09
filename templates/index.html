@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante Alves - Cardápio Digital</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    </head>
+<body>
+
+    <header class="header">
+        <h1>🍽️ Restaurante Alves</h1>
+        <p>Cardápio Rápido e Sem Burocracia!</p>
+    </header>
+
+    <main class="container">
+        
+        <section id="cardapio-section">
+            <h2>Nosso Cardápio</h2>
+            <div id="cardapio-list" class="cardapio-grid">
+                <p id="loading-message">Carregando cardápio...</p>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="carrinho-section">
+            <h2>🛒 Seu Pedido</h2>
+            
+            <div id="carrinho-itens">
+                <p class="empty-cart-message">Seu carrinho está vazio. Adicione itens!</p>
+            </div>
+
+            <div class="resumo-carrinho">
+                <p>Total: <span id="valor-total">R$ 0,00</span></p>
+            </div>
+            
+            <div class="finalizar-form">
+                <label for="nome-cliente">Seu Nome:</label>
+                <input type="text" id="nome-cliente" placeholder="Ex: João Silva" required>
+                
+                <button id="btn-finalizar" onclick="enviarPedido()" disabled>
+                    Finalizar Pedido
+                </button>
+            </div>
+        </section>
+
+        <section id="confirmacao-section" style="display: none;">
+            <h2>✅ Pedido Enviado!</h2>
+            <div id="status-pedido">
+                <p>Seu ID de Pedido é: <strong id="pedido-id-display">#...</strong></p>
+                <p>Posição na Fila: <strong id="fila-posicao-display">...</strong></p>
+                
+                <button id="btn-whatsapp" class="whatsapp-btn" style="margin-top: 15px;">
+                    Compartilhar via WhatsApp
+                </button>
+                <p class="aviso-fila">Aguarde a atualização da sua posição.</p>
+            </div>
+        </section>
+
+    </main>
+    
+    <script src="{{ url_for('static', filename='j

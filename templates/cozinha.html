@@ -1,0 +1,61 @@
+# --- ADICIONE ESTA ESTRUTURA DE DADOS NO INÍCIO DO SEU app.py ---
+
+CARDAPIO_DATA = {
+    "ALMOÇO": [
+        {"nome": "Self Service", "preco": 42.99},
+        {"nome": "Self Service Vegetariano", "preco": 33.99},
+        {"nome": "Proteína", "preco": 59.99},
+        {"nome": "Sobremesa", "preco": 54.99}
+    ],
+    "LANCHES": [
+        {"nome": "Salgado Assado", "preco": 4.50},
+        {"nome": "Salgado Vegetariano", "preco": 4.50},
+        {"nome": "Pão de Queijo 50g", "preco": 2.50},
+        {"nome": "Salada de Fruta", "preco": 6.00},
+        {"nome": "Pizza", "preco": 9.00},
+        {"nome": "Sanduíche Natural 150g", "preco": 7.00},
+        {"nome": "Sanduíche Vegetariano 120g", "preco": 7.00},
+        {"nome": "Bolo Simples 100g", "preco": 3.00},
+        {"nome": "Pão C/ Sal/Margarina ou Manteiga 50g", "preco": 2.00},
+        {"nome": "Misto Simples", "preco": 5.00},
+        {"nome": "Misto Completo", "preco": 7.00},
+        {"nome": "Queijo Simples", "preco": 5.00},
+        {"nome": "Queijo Quente", "preco": 7.50},
+        {"nome": "Queijo Quente Completo", "preco": 7.50},
+        {"nome": "Fruta", "preco": 1.00}
+    ],
+    "TAPIOCA": [
+        {"nome": "Com Manteiga", "preco": 4.00},
+        {"nome": "Com Ovo", "preco": 7.00},
+        {"nome": "Presunto e Queijo", "preco": 9.00},
+        {"nome": "Presunto, Queijo e Ovo", "preco": 11.00}
+    ],
+    "CUSCUZ": [
+        {"nome": "Cuscuz Puro", "preco": 3.75},
+        {"nome": "Com Ovo", "preco": 5.50},
+        {"nome": "Presunto e Queijo", "preco": 7.50},
+        {"nome": "Presunto, Queijo e Ovo", "preco": 9.50},
+        {"nome": "Com Manteiga", "preco": 4.50}
+    ],
+    "OMELETE": [
+        {"nome": "Omelete Simples", "preco": 12.00},
+        {"nome": "Omelete Completo", "preco": 15.00}
+    ],
+    "BEBIDAS": [
+        {"nome": "Café Puro 50 ml", "preco": 2.50},
+        {"nome": "Café Com Leite 50 ml", "preco": 3.00},
+        {"nome": "Leite Puro 50 ml", "preco": 2.60},
+        {"nome": "Leite Com Chocolate", "preco": 3.50},
+        {"nome": "100 ml", "preco": 6.00},
+        {"nome": "Vitamina de Frutas 300 ml", "preco": 8.00},
+        {"nome": "Suco Natural 300 ml", "preco": 6.00}
+    ]
+}
+
+# --- Atualize a sua Rota /api/cardapio no app.py ---
+
+# 3. Rota de Teste para o Cardápio
+@app.route('/api/cardapio')
+def api_cardapio():
+    # Retorna o dicionário de dados mapeado acima
+    return jsonify(CARDAPIO_DATA)

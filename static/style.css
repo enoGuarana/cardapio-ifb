@@ -1,0 +1,201 @@
+/* Variáveis e Reset Básico */
+:root {
+    --primary-color: #ffcc00; /* Amarelo/Ouro, inspirado no logo */
+    --secondary-color: #333;
+    --background-color: #f4f4f4;
+    --text-color: #1a1a1a;
+    --success-color: #4CAF50;
+    --danger-color: #f44336;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+/* Header */
+.header {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2em;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+h2 {
+    color: var(--secondary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 5px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+/* -------------------- */
+/* GRID DO CARDÁPIO (Responsivo) */
+/* -------------------- */
+.cardapio-grid {
+    display: grid;
+    /* Padrão para mobile: 1 coluna */
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.categoria-box {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.categoria-box h3 {
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+    font-size: 1.3em;
+}
+
+.item-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px dashed #ddd;
+}
+
+.item-card:last-child {
+    border-bottom: none;
+}
+
+.item-details {
+    flex-grow: 1;
+}
+
+.item-name {
+    font-weight: bold;
+}
+
+.item-price {
+    color: var(--primary-color);
+    font-size: 1.1em;
+    margin-left: 10px;
+}
+
+.add-btn {
+    background-color: var(--success-color);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.add-btn:hover {
+    background-color: #388e3c;
+}
+
+/* -------------------- */
+/* CARRINHO E FORMULÁRIO */
+/* -------------------- */
+#carrinho-section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    margin-top: 30px;
+}
+
+.resumo-carrinho p {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: right;
+    margin: 15px 0;
+}
+
+.finalizar-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.finalizar-form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#btn-finalizar {
+    padding: 12px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#btn-finalizar:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    color: #888;
+}
+
+/* -------------------- */
+/* CONFIRMAÇÃO E WHATSAPP */
+/* -------------------- */
+#confirmacao-section {
+    text-align: center;
+    padding: 40px 20px;
+    border: 2px solid var(--success-color);
+    border-radius: 8px;
+    margin-top: 30px;
+    background-color: #e8f5e9;
+}
+
+#pedido-id-display, #fila-posicao-display {
+    color: var(--danger-color); /* Em vermelho para destaque */
+    font-size: 1.4em;
+}
+
+.whatsapp-btn {
+    background-color: var(--success-color); /* Cor verde do WhatsApp */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+/* -------------------- */
+/* MEDIA QUERIES (Responsividade para Desktop) */
+/* -------------------- */
+@media (min-width: 768px) {
+    .cardapio-grid {
+        /* Para telas maiores, exibe em 2 colunas */
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

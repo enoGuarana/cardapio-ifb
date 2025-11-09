@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório de Pedidos - Admin</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        /* Estilos específicos para o Relatório */
+        body { background-color: #f8f8f8; }
+        .relatorio-header { 
+            background-color: #333; 
+            color: white; 
+            padding: 20px; 
+            text-align: center;
+        }
+        h2 { 
+            border-color: #333;
+            color: #333;
+            margin-top: 30px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+            font-size: 0.9em;
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+            color: #555;
+        }
+        tr:hover {
+            background-color: #f9f9f9;
+        }
+        .total-box {
+            background-color: #d4edda; /* Verde claro */
+            border: 1px solid #c3e6cb;
+            padding: 15px;
+            margin-top: 30px;
+            text-align: right;
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #155724; /* Verde escuro */
+            border-radius: 8px;
+        }
+        /* Classes para colorir a coluna de status */
+        .status-Pronto { color: green; font-weight: bold; }
+        .status-Pendente { color: orange; }
+        .status-Em_Preparo { color: blue; }
+        .status-Cancelado { color: red; text-decoration: line-through; }
+    </style>
+</head>
+<body>
+
+    <header class="relatorio-header">
+        <h1>Relatório Financeiro de Pedidos</h1>
+        <p>Visão Administrativa (Total de Pedidos)</p>
+    </header>
+
+    <main class="container">
+        
+        <div class="total-box">
+            Conta Final (Pedidos Não Cancelados): {{ conta_final }}
+        </div>
+
+        <h2>Histórico Detalhado</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Horário</th>
+                    <th>Cliente</th>
+                    <th>Itens Pedidos</th>
+                    <th>Status</th>
+                    <th>Valor Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for pedido in pedidos %}
+                    <tr>
+                        <td>#{{ pedido.id }}</td>
+                        <td>{{ pedido.horario }}</td>
+                        <td>{{ pedido.nome_cliente }}</td>
+                        <td>
+                            <ul>
+                                {% for item in pedido.detalhes %}
+                                    <li>{{ item }}</li>
+                                {% endfor %}
+                            </ul>
+                        </td>
+                        <td class="status-{{ pedido.status }}">
+                            {{ pedido.status }}
+                        </td>
+                        <td>{{ pedido.valor_total }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        
+        {% if not pedidos %}
+            <p style="text-align: center; margin-top: 50px;">Nenhum pedido registrado no banco de dados.</p>
+        {% endif %}
+        
+    </main>
+
+</body>
+</html>
