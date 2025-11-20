@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Restaurante Alves — Cardápio Digital</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+<header class="hero">
+  <div class="hero-header">
+    <img class="logo-capa" src="img/logo.png" alt="Logo Restaurante Alves">
+    <h1>Restaurante Alves — Cardápio Digital</h1>
+    <p class="lead">Pratos saudáveis, variados e deliciosos — design pensado para desktop, tablet e celular.</p>
+    <div class="actions">
+      <div class="button-group">
+        <a class="btn primary" href="#cardapio"><i class="fa-solid fa-utensils"></i> Ver Cardápio</a>
+        <a class="btn primary" href="tel:+5561996086487"><i class="fa-solid fa-phone-volume"></i> Ligar Agora</a>
+      </div>
+      <p><strong>Avalie no Google:</strong> <a href="https://www.google.com/search?q=restaurante+alves+ifb" target="_blank">Queremos saber o seu Feedback</a></p>
+    </div>
+  </div>
+</header>
+
+<main id="cardapio" class="menu-wrap">
+<div class="menu-controls fade-in">
+<div class="tabs" role="tablist">
+<button class="tab active" data-cat="todas">Todas</button>
+<button class="tab" data-cat="principais">Pratos Principais</button>
+<button class="tab" data-cat="lanches">Lanches Rápidos</button>
+<button class="tab" data-cat="bebidas">Bebidas</button>
+<button class="tab" data-cat="sobremesas">Sobremesas</button>
+</div>
+</div>
+<div class="menu-grid fade-in" id="menuGrid">
+<article class="card" data-cat="principais"><div class="card-body"><h5>Self Service</h5><p>Sirva-se no Buffet</p><div class="price-row"><span class="price">R$ 42,99</span><button class="add-btn">Adicionar</button></div></div></article>
+<article class="card" data-cat="principais"><div class="card-body"><h5>Self Service Vegetariano</h5><p>Prato principal sem carne.</p><div class="price-row"><span class="price">R$ 33,99</span><button class="add-btn">Adicionar</button></div></div></article>
+<article class="card" data-cat="principais"><div class="card-body"><h5>Proteína</h5><p>Valor para apenas carnes e proteínas</p><div class="price-row"><span class="price">R$ 59,99</span><button class="add-btn">Adicionar</button></div></div></article>
+<article class="card" data-cat="sobremesas"><div class="card-body"><h5>Bolos simples variados</h5><p>Fatia de bolos variados a depender da disponibilidade do dia</p><div class="price-row"><span class="price">R$ 3,00</span><button class="add-btn">Adicionar</button></div></div></article>
+<article class="card" data-cat="sobremesas"><div class="card-body"><h5>Sobremesa (Geral)</h5><p>Consulte as opções de hoje.</p><div class="price-row"><span class="price">R$ 54,99/ kilo</span><button class="add-btn">Adicionar</button></div></div></article>
+<article class="card" data-cat="lanches"><div class="card-body"><h5>Salgado Assado</h5><p>Opção do dia</p><div class="price-row"><span class="price">R$ 4,50</span><button class="add-btn">Adicionar</button></div></div></article>
+<article class="card" data-cat="lanches"><div class="card-body"><h5>Salgado Vegetariano</h5><p>Opção vegana.</p><div class="price-row"><span class="price">R$ 4,50</span><button class="add-btn">Adicionar</button></div></div></article>
+<article class="card" data-cat="lanches"><div class="card-body"><h5>Pão de Queijo 50g</h5><p>Pão de queijo quentinho.</p><div class="price-row"><span class="price">R$ 2,50</span><button class="add-btn">Adicionar</button></div></div></article>
+<article class="card" data-cat="lanches"><div class="card-body"><h5>Salada de Frutas</h5><p>Salada de Frutas variadas</p><div class="price-row"><span class="price">R$ 6,00</span><button class="add-btn">Adicionar</button></div></div></article>
+<article class="card" data-cat="lanches"><div class="card-body"><h5>Mini Pizza</h5><p>Mini Pizza (consultar sabores disponíveis)</p><div class="price-row"><span class="price">R$ 5,00</span><button class="add-btn">Adicionar</button></div></div></article>
+<article class="card" data-cat="lanches"><div class="card-body"><h5>Sanduíche Natural 150g</h5><p>Sanduíche Natural Saudável 150g</p><div class="price-row"><span class="price">R$ 7,00</span><button class="add-btn">Adicionar</button></div></div></article>
+<article class="card" data-cat="lanches"><div class="card-body"><h5>Sanduíche Natural Vegetariano 120g</h5><p>Sanduíche Natural Vegetariano Saudável 120g</p><div class="price-row"><span class="price">R$ 7,00</span><button class="add-btn">Adicionar</button></div></div></article>
+<article class="card" data-cat="lanches"><div class="card-body"><h5>Pão na chapa com manteiga</h5><p>Pão na chapa com manteiga</p><div class="price-row"><span class="price">R$ 2,00</span><button class="add-btn">Adicionar</button></div></div></article>
+<article class="card" data-cat="lanches"><div class="card-body"><h5>Misto Simples</h5><div class="price-row"><span class="price">R$ 5,00</span><button class="add-btn">Adicionar</button></div></div></article>
+<article class="card" data-cat="lanches"><div class="card-body"><h5>Misto Completo</h5><div class="price-row"><span class="price">R$ 7,50</span><button class="add-btn">Adicionar</button></div></div></article>
+<article class="card" data-cat="lanches"><div class="card-body"><h5>Queijo Quente</h5><p>Queijo Quente</p><div class="price-row"><span class="price">R$ 5,00</span><button class="add-btn">Adicionar</button></div></div></article>
+<article class="card" data-cat="lanches"><div class="card-body"><h5>Queijo Quente Completinho</h5><p>Queijo Quente Completinho</p><div class="price-row"><span class="price">R$ 7,50</span><button class="add-btn">Adicionar</button></div></div></article>
+<article class="card" data-cat="lanches"><div class="card-body"><h5> Unidade de Fruta</h5><p>Uniddade de Fruta Fresca</p><div class="price-row"><span class="price">R$ 1,00</span><button class="add-btn">Adicionar</button></div></div></article>
+<article class="card" data-cat="lanches"><div class="card-body"><h5>Tapioca com manteiga</h5><div class="price-row"><span class="price">R$ 4,50</span><button class="add-btn">Adicionar</button></div></div></article>
+<article class="card" data-cat="lanches"><div class="card-body"><h5>Tapioca com ovo</h5><div class="price-row"><span class="price">R$ 7,00</span><button class="add-btn">Adicionar</button></div></div></article>
+<article class="card" data-cat="lanches"><div class="card-body"><h5>Tapioca presunto e queijo</h5><div class="price-row"><span class="price">R$ 9,00</span><button class="add-btn">Adicionar</button></div></div></article>
+<article class="card" data-cat="lanches"><div class="card-body"><h5>Tapioca presunto, queijo e ovo</h5><div class="price-row"><span class="price">R$ 11,00</span><button class="add-btn">Adicionar</button></div></div></article>
+<article class="card" data-cat="lanches"><div class="card-body"><h5>Cuzcuz puro</h5><div class="price-row"><span class="price">R$ 3,75</span><button class="add-btn">Adicionar</button></div></div></article>
+<article class="card" data-cat="lanches"><div class="card-body"><h5>Cuzcuz com ovo</h5><div class="price-row"><span class="price">R$ 3,75</span><button class="add-btn">Adicionar</button></div></div></article>
+<article class="card" data-cat="lanches"><div class="card-body"><h5>Cuzcuz presunto e queijo</h5><div class="price-row"><span class="price">R$ 3,75</span><button class="add-btn">Adicionar</button></div></div></article>
+<article class="card" data-cat="lanches"><div class="card-body"><h5>Cuzcuz presunto, queijo e ovo</h5><div class="price-row"><span class="price">R$ 3,75</span><button class="add-btn">Adicionar</button></div></div></article>
+<article class="card" data-cat="lanches"><div class="card-body"><h5>Cuzcuz com manteiga</h5><div class="price-row"><span class="price">R$ 4,50</span><button class="add-btn">Adicionar</button></div></div></article>
+<article class="card" data-cat="bebidas"><div class="card-body"><h5>Suco Natural</h5><p>Suco de Frutas natural de 300ml feito na hora¿</p><div class="price-row"><span class="price">R$ 6,00</span><button class="add-btn">Adicionar</button></div></div></article>
+<article class="card" data-cat="bebidas"><div class="card-body"><h5>Café Puro 50ml</h5><p>Expresso forte.</p><div class="price-row"><span class="price">R$ 2,50</span><button class="add-btn">Adicionar</button></div></div></article>
+<article class="card" data-cat="bebidas"><div class="card-body"><h5>Café com Leite 50ml</h5><p>Clássico e cremoso.</p><div class="price-row"><span class="price">R$ 3,00</span><button class="add-btn">Adicionar</button></div></div></article>
+<article class="card" data-cat="bebidas"><div class="card-body"><h5>Leite com Chocolate 100ml</h5><p>leite com Chocolate</p><div class="price-row"><span class="price">R$ 3,50</span><button class="add-btn">Adicionar</button></div></div></article>
+<article class="card" data-cat="bebidas"><div class="card-body"><h5>Vitamina</h5><p>Deliciosa vitamina de Frutas 300ml</p><div class="price-row"><span class="price">R$ 6,00</span><button class="add-btn">Adicionar</button></div></div></article>
+</div>
+</main>
+<section class="section location-section fade-in">
+  <div class="location">
+    <div class="location-info">
+      <h3>Nosso Endereço</h3>
+      <address>
+        <a class="address-link"
+           href="https://www.google.com/search?sca_esv=18637f1ce6371d1f&q=restaurante+alves+brasília+endereço&ludocid=2699611337530544535&sa=X&ved=2ahUKEwiPxNCFzIGRAxUnp5UCHcduD_gQ6BN6BAgzEAI"
+           target="_blank">
+          Setor de Grandes Áreas Norte 610 - Asa Norte, Brasília - DF, 70830-450
+        </a>
+      </address>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6143.894782755937!2d-47.880568123257694!3d-15.757885187825518!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a3a306eeaf0a5%3A0x2576f23555201197!2sRestaurante%20Alves%20-%20SGAN%20610!5e0!3m2!1spt-BR!2sbr!4v1703002210802!5m2!1spt-BR!2sbr"
+        width="100%"
+        height="230"
+        style="border:0; border-radius:16px;"
+        loading="lazy"
+        allowfullscreen></iframe>
+    </div>
+    <aside class="hours">
+      <h4>Horário de funcionamento</h4>
+      <ul>
+        <li><strong>Seg a Sex:</strong> 7h30 às 20h30</li>
+        <li><strong>Sáb e Dom:</strong> Fechado</li>
+      </ul>
+    </aside>
+  </div>
+</section>
+
+<section class="section about-section fade-in" id="sobre">
+  <h2 class="section-title">Sobre o Restaurante Alves</h2>
+  <p>O Restaurante Alves, localizado no Instituto Federal de Brasília (IFB), é conhecido por oferecer refeições de alta qualidade a preços acessíveis. Com um cardápio diversificado que inclui opções vegetarianas e veganas, o restaurante atende às necessidades de todos os clientes. Nosso compromisso é proporcionar uma experiência gastronômica agradável, com pratos preparados com ingredientes frescos e um atendimento acolhedor.</p>
+</section>
+<footer>
+<section class="section" id="contato">
+<h2 class="section-title">Fale Conosco</h2>
+<div class="contact-box">
+<p><i class="fa-solid fa-phone"></i> <strong>(61) 99608-6487</strong></p>
+</div>
+</section>
+<p class="copyright">  João Enomoto 2025 - Todos os direitos reservados.</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
